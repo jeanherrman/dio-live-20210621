@@ -16,23 +16,23 @@ public class Main {
 
 	public static void main(String[] args) {
 		Curso cursoJavaBasico = new Curso();
-		cursoJavaBasico.setTitulo("Java Básico");
-		cursoJavaBasico.setDescricao("Aprenda os conceitos básicos sobre Java.");
+		cursoJavaBasico.setTitulo("Java Bï¿½sico");
+		cursoJavaBasico.setDescricao("Aprenda os conceitos bï¿½sicos sobre Java.");
 		cursoJavaBasico.setCargaHoraria(8);
 		
 		Curso cursoDotNet = new Curso();
 		cursoDotNet.setTitulo("Java .NET");
-		cursoDotNet.setDescricao("Aprenda os conceitos básicos sobre C#.");
+		cursoDotNet.setDescricao("Aprenda os conceitos bï¿½sicos sobre C#.");
 		cursoDotNet.setCargaHoraria(8);
 		
 		Curso cursoJavaAvancado = new Curso();
-		cursoJavaAvancado.setTitulo("Java Avançado");
-		cursoJavaAvancado.setDescricao("Aprenda os conceitos avançados sobre Java.");
+		cursoJavaAvancado.setTitulo("Java Avanï¿½ado");
+		cursoJavaAvancado.setDescricao("Aprenda os conceitos avanï¿½ados sobre Java.");
 		cursoJavaAvancado.setCargaHoraria(8);
 		
 		Mentoria mentoria = new Mentoria();
-		mentoria.setTitulo("Aprendendo Orientação a Objetos com Java");
-		mentoria.setDescricao("Imersão sobre os pilares da Orientação a Objetos.");
+		mentoria.setTitulo("Aprendendo Orientaï¿½ï¿½o a Objetos com Java");
+		mentoria.setDescricao("Imersï¿½o sobre os pilares da Orientaï¿½ï¿½o a Objetos.");
 		mentoria.setData(LocalDateTime.now());
 		
 		Bootcamp bootcamp = new Bootcamp();
@@ -42,26 +42,26 @@ public class Main {
 		List<Conteudo> conteudosBootcamp = Arrays.asList(cursoJavaBasico, cursoJavaAvancado, mentoria);
 		bootcamp.setConteudos(conteudosBootcamp);
 		
-		Dev felipao = new Dev();
-		felipao.setNome("Felipão");
+		Dev wagner = new Dev();
+		wagner.setNome("Wagner");
 		
-		Dev venilton = new Dev();
-		venilton.setNome("Venilton");
+		Dev jean = new Dev();
+		jean.setNome("Jean");
 		
-		felipao.inscrever(cursoDotNet);
-		felipao.inscrever(bootcamp);
-		felipao.progredir();
-		felipao.progredir();
+		wagner.inscrever(cursoDotNet);
+		wagner.inscrever(bootcamp);
+		wagner.progredir();
+		wagner.progredir();
 		
-		venilton.inscrever(bootcamp);
-		venilton.progredir();
-		venilton.progredir();
-		venilton.progredir();
+		jean.inscrever(bootcamp);
+		jean.progredir();
+		jean.progredir();
+		jean.progredir();
 
-		System.out.println(String.format("XP Felipão: %.2f", felipao.calcularTotalXp()));
-		System.out.println(String.format("XP Venilton: %.2f", venilton.calcularTotalXp()));
+		System.out.println(String.format("XP Wagner: %.2f", wagner.calcularTotalXp()));
+		System.out.println(String.format("XP jean: %.2f", jean.calcularTotalXp()));
 		
-		List<Dev> ranking = Arrays.asList(felipao, venilton).stream()
+		List<Dev> ranking = Arrays.asList(wagner, jean).stream()
 								  .sorted((dev1, dev2) -> Double.compare(dev2.calcularTotalXp(), dev1.calcularTotalXp()))
 								  .collect(Collectors.toList());
 		
